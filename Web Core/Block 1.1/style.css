@@ -6,18 +6,21 @@
 }
 
 body {
-  width: 1600px;
-  margin: 0 auto;
-  padding: 0 80px;
+  font-size: 16px;
+  background: #eff6ff;
+  color: #2a4a5c;
 }
 
 .wrapper {
+  max-width: 1600px;
+  padding: 0 80px;
+  /* padding: 100px 80px; */
+  margin: 0 auto;
   display: flex;
 }
 
 .bg {
   width: 100%;
-  height: 100vh;
   background-image: url("./img/bg.jpg");
   background-repeat: no-repeat;
 }
@@ -28,6 +31,7 @@ body {
 
 .main {
   width: 90%;
+  background: #ffffff;
 }
 
 .wrap {
@@ -35,15 +39,150 @@ body {
   margin-top: 110px;
 }
 
+.title {
+  margin-bottom: 15px;
+}
+
+.text {
+  margin-bottom: 60px;
+  font-style: 20px;
+}
+
 .btn {
   display: flex;
+  margin-bottom: 50px;
+}
+
+button {
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  width: 245px;
+  height: 40px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 .btn img {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
 }
 
-.btn__facebook{
+.btn__facebook {
+  background-color: #255a9b;
+}
 
+.btn__linkedin {
+  background-color: #0076b6;
+}
+
+.btn p {
+  margin-left: 20px;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 45px;
+  margin-right: 70px;
+}
+
+.separator__line {
+  width: 100px;
+  height: 1px;
+  background: #eeeeee;
+}
+
+.separator__text {
+  margin: 0 10px;
+  text-transform: uppercase;
+}
+
+input[type=email],
+input[type=phone] {
+  width: 250px;
+  height: 55px;
+  padding: 20px 10px 0px;
+  border: 1px solid #EEEEEE;
+}
+
+input[type=email] {
+  margin-right: 30px;
+}
+
+input:focus {
+  border-left: 1px solid #3698FB;
+}
+
+form {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.form__text {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.text__email,
+.text__phone {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 14px;
+  color: #96A5B1;
+}
+
+.radio__title {
+  margin-bottom: 10px;
+}
+
+.radio__text {
+  margin-bottom: 50px;
+}
+
+.radio {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.radio__text {
+  margin-right: 20px;
+}
+
+.info {
+  padding: 1px 4px;
+  border: 1px solid #96A5B1;
+  border-radius: 50%;
+  color: #96A5B1;
+  font-size: 10px;
+}
+
+.info__text {
+  width: 260px;
+  padding: 10px 15px;
+  margin-bottom: 50px;
+  font-size: 14px;
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+  border-radius: 5px;
+  color: #96A5B1;
+  box-shadow: 0px 10px 40px 10px rgba(238, 238, 238, 1);
+
+}
+
+.agree {
+  color: #96A5B1;
+  cursor: pointer;
+}
+
+.btn__submit {
+  margin-top: 55px;
+  margin-bottom: 55px;
+  background: #3698FB;
+  border-radius: 5px;
 }
