@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Block 1.1</title>
+  <title>iintoo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="./style.css" rel="stylesheet">
 </head>
 <body>
@@ -15,7 +16,7 @@
     </div>
     <div class="main">
       <div class="wrap">
-        <h1 class="title head__title">Get iintoo today</h1>
+        <h1 class="title head__title">Get iintoo it today</h1>
         <p class="text head__text">There is no charge or obligation upon registration.</p>
         <div class="btn">
           <button class="btn__facebook">
@@ -43,21 +44,33 @@
           </div>
         </form>
 
-        <h2 class="title radio__title">What type of investor are you?</h2>
-        <p class="text radio__text">Select the type of investor you are below.</p>
+        <h2 class="radio__title">What type of investor are you?</h2>
+        <p class="radio__text">Select the type of investor you are below.</p>
 
         <div class="radio">
-          <input class="radio__input" id name="individual" type="radio">
-          <span class="radio__text">Individual <i class="info">i</i></span>
-      
-          <input class="radio__input" id name="business" type="radio">
-          <span class="radio__text">Business  <i class="info">i</i></span>
-        
-          <input class="radio__input" id name="ira" type="radio">
-          <span class="radio__text">IRA <i class="info">i</i></span>
+          <label for="individual">
+            <input class="radio__input" id="individual" name="radio" type="radio" checked>
+            <span class="radio__text--info">Individual <i class="info">i</i></span>
+          </label>
           
-          <input class="radio__input" id name="trust" type="radio">
-          <span class="radio__text">Trust <i class="info">i</i></span>
+          
+          <label for="business">
+            <input class="radio__input" id="business" name="radio" type="radio">
+            <span class="radio__text--info">Business  <i class="info">i</i></span>
+          </label>
+          
+          
+          <label for="ira">
+            <input class="radio__input" id="ira" name="radio" type="radio">
+            <span class="radio__text--info">IRA <i class="info">i</i></span>
+          </label>
+          
+          
+          <label for="trust">
+            <input class="radio__input" id="trust" name="radio" type="radio">
+            <span class="radio__text--info">Trust <i class="info">i</i></span>
+          </label>
+          
           
         </div>
         <div class="info__text">
