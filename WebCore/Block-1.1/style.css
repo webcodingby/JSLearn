@@ -16,7 +16,6 @@ body {
 
 .wrapper {
   max-width: 1600px;
-  min-width: 320px;
   padding: 0 5.7em;
   margin: 0 auto;
   display: flex;
@@ -26,6 +25,7 @@ body {
   width: 100%;
   background-image: url("./img/bg.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .bg svg {
