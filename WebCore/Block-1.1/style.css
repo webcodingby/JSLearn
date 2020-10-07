@@ -273,7 +273,7 @@ form {
   }
 }
 
-@media (min-width: 320px) {
+@media (max-width: 320px) {
   body {
     font-size: 8px;
   }
