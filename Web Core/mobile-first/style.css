@@ -41,6 +41,7 @@ font-weight: 700;
 
 a{
   text-decoration: none;
+  cursor: pointer;
 }
 
 body{
@@ -62,45 +63,44 @@ body{
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .button__menu {
   margin-left: 16px;
-  background: #FF3E79 url('./img/burger_icon.svg') no-repeat center;
+  background: #FF3E79 url('./img/burger.svg') no-repeat center;
 }
 
-
-
-.logo{
+.center{
   height: 52px;
 }
 
-.logo__img{
+.center__logo--img{
   margin-bottom: 0;
 }
 
-.logo__callback{
+.center__callback{
   display: none;
   margin-bottom: 0;
 }
 
-.callback {
+.info {
   position: relative;
   display: flex;
   padding-left: 20px;
 }
 
-.callback__repair{
+.info__repair{
   background:#FF3E79 url('./img/repair.svg') no-repeat center;
   margin-right: 16px;
 }
 
-.callback__checkstatus{
+.info__checkstatus{
   background:#FF3E79 url('./img/checkstatus.svg') no-repeat center;
   margin-right: 16px;
 }
 
-.callback::before {
+.info::before {
   position: absolute;
   content: "";
   top: 8%;
@@ -108,9 +108,7 @@ body{
   width: 2px;
   height: 32px;
   background-color: #EAEAEA;
-
 }
-
 
 .callback__info {
   margin: 0 16px;
@@ -127,7 +125,7 @@ body{
 
 .main__title h1{
   margin: 24px 0;
-  padding-left: 12px;
+  padding-left: 14px;
   font-family: 'TT Lakes Bold';
   font-size: 28px;
   line-height: 40px;
@@ -171,23 +169,24 @@ body{
   border-radius: 6px;
 }
 
-.about {
+.about__wrap {
   margin-top: 24px;
+  margin-left: 16px;
 }
 .about__text {
-  padding: 0 16px 16px;
-  font-family: 'TT Lakes Regular';
-  font-style: normal;
-  font-weight: normal;
+  margin-bottom: 16px;
+  height: 90px;
+  overflow: hidden;
+  font-family: 'TT Lakes Regular', serif;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.2px;
+  color: #1B1C21;
 }
 
 .about__button{
   display: flex;
   align-items: center;
-  margin: 0 16px;
 }
 
 .about__link:hover,
@@ -231,32 +230,85 @@ body{
     background-color: #EAEAEA;
   }
 
-  .logo{
-    width: 100%;
+  .center{
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  .logo__img{
+  .center__logo--img{
     margin-left: 20px;
   }
 
-  .logo__callback{
+  .center__callback{
     display: flex;
     margin-right: 20px;
   }
 
-  .logo__callback img{
+  .callback__call{
+    background:#FF3E79 url('./img/call.svg') no-repeat center;
     margin-right: 16px;
   }
 
-  .logo__callback img:last-child{
-    margin-right: 0;
+  .callback__chat{
+    background:#FF3E79 url('./img/chat.svg') no-repeat center;
+    margin-right: 16px;
+  }
+  
+  .callback__profile{
+    background:#FF3E79 url('./img/profile.svg') no-repeat center;
+    margin-right: 16px;
   }
 
-  .callback{
+  .info{
     display: flex;
+  }
+
+  .info__checkstatus{
+    margin-right: 24px;
+  }
+
+  .main__title h1{
+    padding-left: 22px;
+  }
+
+  .nav__list{
+    margin-left: 24px;
+  }
+
+  .nav__list::-webkit-scrollbar{
+    width: 0; 
+  }
+
+  .about{
+    margin-left: 24px;
+    display: flex;
+    margin-top: 5px;
+    padding-bottom: 55px;
+  }
+
+  .about__wrap{
+    width: 49%;
+    padding: 0;
+    margin: 0;
+    padding-right: 50px;
+  }
+
+  .about__text{
+    padding: 0;
+    margin:  0 0 10px 0;
+    height: 160px;
+    overflow: hidden;
+    line-height: 20px;
+  }
+
+  .about__img{
+    margin: 0;
+    width: 360px;
+    height: 208px;
+    background: #F8F8F8;
+    border-radius: 6px;
   }
 }
 
