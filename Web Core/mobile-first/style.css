@@ -232,10 +232,8 @@ body{
 /*  Меню  */
 
 .mobile--menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 19px 24px 32px 24px;
+  padding-top: 24px;
+  padding-bottom: 32px;
   max-width: 320px;
   display: flex;
   flex-direction: column;
@@ -246,6 +244,7 @@ body{
 .mobile--header {
   display: flex;
   align-items: center;
+  margin-left: 24px;
 }
 
 .button--cancel {
@@ -272,6 +271,7 @@ body{
 
 .column--menu .menu--link{
   position: relative;
+  margin-left: 24px;
   margin-bottom: 32px;
   position: relative;
   font-family: 'TT Lakes Medium';
@@ -285,6 +285,7 @@ body{
 .column--menu .menu--link:hover,
 .column--menu .menu--link:active,
 .column--menu .menu--link:focus{
+  margin-left: 0;
   padding-left: 24px;
   color: #7E7E82;
   border-left: 2px solid #41F6D7;
@@ -302,6 +303,7 @@ body{
 .mobile--contact {
   display: flex;
   flex-direction: column;
+  margin-left: 24px;
 }
 
 .contact__callback{
@@ -348,6 +350,7 @@ a.contact--tel{
 .lang {
   display: flex;
   margin-top: 40px;
+  margin-left: 24px;
 }
 
 .lang a{
