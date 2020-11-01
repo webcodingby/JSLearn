@@ -301,9 +301,10 @@ body{
 }
 
 .mobile--contact {
+  margin-top: 200px;
+  margin-left: 24px;
   display: flex;
   flex-direction: column;
-  margin-left: 24px;
 }
 
 .contact__callback{
@@ -323,11 +324,6 @@ body{
 .callback__profile{
   background:#FF3E79 url('./img/profile.svg') no-repeat center;
   margin-right: 16px;
-}
-
-.mobile--contact {
-  margin-top: 270px;
-  
 }
 
 a.contact--mail{
