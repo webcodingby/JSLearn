@@ -34,7 +34,13 @@ font-weight: 700;
 *{
   margin: 0;
   padding: 0;
+  outline: none;
   box-sizing: border-box;
+}
+
+*:focus{
+  border: 1px solid #ccc;
+  opacity: 0.9;
 }
 
 a{
@@ -64,8 +70,16 @@ body{
 .button{
   width: 40px;
   height: 40px;
+  border: none;
   border-radius: 50%;
+  outline: none;
   cursor: pointer;
+}
+
+.button:focus,
+.button:hover{
+  border: 1px solid #ccc;
+  opacity: 0.9;
 }
 
 .button__menu {
@@ -215,6 +229,145 @@ body{
   margin: 16px 0 35px;
 }
 
+/*  Меню  */
+
+.mobile--menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 19px 24px 32px 24px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  color: #1B1C21;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 
+              16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+.mobile--header {
+  display: flex;
+  align-items: center;
+}
+
+.button--cancel {
+  margin-right: 16px;
+  background: #FF3E79 url('./img/cancel.svg') no-repeat center;
+}
+.logo {
+
+}
+.button--search {
+  margin-left: 78px;
+  background: #FF3E79 url('./img/search.svg') no-repeat center;
+}
+
+.mobile--column{
+  margin-top: 46px;
+}
+
+.mobile--column,
+.column--menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.column--menu .menu--link{
+  position: relative;
+  margin-bottom: 32px;
+  position: relative;
+  font-family: 'TT Lakes Medium';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #1B1C21;
+}
+
+.column--menu .menu--link.active,
+.column--menu .menu--link:hover,
+.column--menu .menu--link:active,
+.column--menu .menu--link:focus{
+  padding-left: 24px;
+  color: #7E7E82;
+  border-left: 2px solid #41F6D7;
+}
+
+.column--menu .menu--link:before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: #000;
+}
+
+.mobile--contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__callback{
+  display: flex;
+}
+
+.callback__call{
+  background:#FF3E79 url('./img/call.svg') no-repeat center;
+  margin-right: 16px;
+}
+
+.callback__chat{
+  background:#FF3E79 url('./img/chat.svg') no-repeat center;
+  margin-right: 16px;
+}
+  
+.callback__profile{
+  background:#FF3E79 url('./img/profile.svg') no-repeat center;
+  margin-right: 16px;
+}
+
+.mobile--contact {
+  margin-top: 270px;
+  
+}
+
+a.contact--mail{
+  margin: 16px 0 12px 0;
+  font-family: 'TT Lakes Medium';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #1B1C21;
+}
+
+a.contact--tel{
+  font-family: 'TT Lakes Bold';
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  color: #1B1C21;
+}
+
+.lang {
+  display: flex;
+  margin-top: 40px;
+}
+
+.lang a{
+  margin-right: 7px;
+  font-family: 'TT Lakes Medium';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #1B1C21;
+  text-transform: uppercase;
+}
+
+.lang a:last-child{
+  margin-right: 0;
+}
+
+.lang a.active{
+  color: #7E7E82;
+}
+
 /* Другие размеры экранов */
 @media screen and (min-width: 768px){
   body{
@@ -250,21 +403,6 @@ body{
   .center__callback{
     display: flex;
     margin-right: 20px;
-  }
-
-  .callback__call{
-    background:#FF3E79 url('./img/call.svg') no-repeat center;
-    margin-right: 16px;
-  }
-
-  .callback__chat{
-    background:#FF3E79 url('./img/chat.svg') no-repeat center;
-    margin-right: 16px;
-  }
-  
-  .callback__profile{
-    background:#FF3E79 url('./img/profile.svg') no-repeat center;
-    margin-right: 16px;
   }
 
   .info{
