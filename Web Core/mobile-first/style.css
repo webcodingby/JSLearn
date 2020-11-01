@@ -79,7 +79,7 @@ body{
 .button:focus,
 .button:hover{
   border: 1px solid #ccc;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .button__menu {
