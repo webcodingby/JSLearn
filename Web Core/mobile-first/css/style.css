@@ -55,6 +55,7 @@ label{
 body{
   min-width: 320px;
   font-family: 'TT Lakes Regular';
+  font-size: 16px;
 }
 
 /* Стили для блоков */
@@ -84,39 +85,40 @@ body{
 
 .button__menu {
   margin-left: 16px;
-  background: #FF3E79 url('./img/burger.svg') no-repeat center;
+  background: #FF3E79 url('../img/icon/burger.svg') no-repeat center;
 }
 
 .center{
   height: 52px;
 }
 
-.center__logo--img{
+.logo--img{
   margin-bottom: 0;
 }
 
-.center__callback{
+.button--callback{
   display: none;
   margin-bottom: 0;
 }
 
-.info {
+.button--info {
   position: relative;
   display: flex;
   padding-left: 20px;
 }
 
-.info__repair{
-  background:#FF3E79 url('./img/repair.svg') no-repeat center;
+.button--repair{
+  background: url('../img/icon/repair.svg') no-repeat center;
+  background-color: #FF3E79;
   margin-right: 16px;
 }
 
-.info__checkstatus{
-  background:#FF3E79 url('./img/checkstatus.svg') no-repeat center;
+.button--checkstatus{
+  background:#FF3E79 url('../img/icon/checkstatus.svg') no-repeat center;
   margin-right: 16px;
 }
 
-.info::before {
+.button--info::before {
   position: absolute;
   content: "";
   top: 8%;
@@ -126,7 +128,7 @@ body{
   background-color: #EAEAEA;
 }
 
-.callback__info {
+.button--callback {
   margin: 0 16px;
 }
 
@@ -180,6 +182,7 @@ body{
   letter-spacing: -0.2px;
   color: #7E7E82;
   white-space: nowrap;
+  border: 2px solid transparent;
 }
 
 .nav__link:hover,
@@ -187,6 +190,7 @@ body{
   background-color: #FFFFFF;
   border: 2px solid #B8FFEC;
   border-radius: 6px;
+
 }
 
 .about__wrap {
@@ -249,14 +253,12 @@ body{
 
 .button--cancel {
   margin-right: 16px;
-  background: #FF3E79 url('./img/cancel.svg') no-repeat center;
+  background: #FF3E79 url('../img/icon/cancel.svg') no-repeat center;
 }
-.logo {
 
-}
 .button--search {
   margin-left: 78px;
-  background: #FF3E79 url('./img/search.svg') no-repeat center;
+  background: #FF3E79 url('../img/icon/search.svg') no-repeat center;
 }
 
 .mobile--column{
@@ -311,18 +313,18 @@ body{
   display: flex;
 }
 
-.callback__call{
-  background:#FF3E79 url('./img/call.svg') no-repeat center;
+.button--call{
+  background:#FF3E79 url('../img/icon/call.svg') no-repeat center;
   margin-right: 16px;
 }
 
-.callback__chat{
-  background:#FF3E79 url('./img/chat.svg') no-repeat center;
+.button--chat{
+  background:#FF3E79 url('../img/icon/chat.svg') no-repeat center;
   margin-right: 16px;
 }
   
-.callback__profile{
-  background:#FF3E79 url('./img/profile.svg') no-repeat center;
+.button--profile{
+  background:#FF3E79 url('../img/icon/profile.svg') no-repeat center;
   margin-right: 16px;
 }
 
@@ -368,6 +370,437 @@ a.contact--tel{
 }
 
 /*  Сервис - бренды  */
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background: #F8F8F8;
+}
+.service--title {
+  padding: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: #7E7E82;
+  border-top: 1px solid #D9FFF5;
+  background: linear-gradient(-270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+}
+
+.service--brand {
+  position: relative;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* .service--brand::after{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  content: '';
+  right: 0;
+  width: 5px;
+  z-index: 2;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px 0 0 10px;
+} */
+
+.brand__link {
+  margin: 16px 8px;
+  padding: 20px 16px;
+  width: 240px !important;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  background: #fff;
+  transform: translate3d(0px, 0px, 0px); 
+  transition: all 0ms ease 0s;
+}
+
+.brand__link:hover .brand__link--img{
+  filter: grayscale(2) drop-shadow(10px 5px 2px #CCC);
+}
+
+.brand__link--info {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #FF3E79;
+  border-radius: 50%;
+}
+
+.brand__link--info::before,
+.brand__link--info::after{
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  height: 10px;
+  width: 2px;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  background: #FF3E79;
+}
+
+.brand__link--info::before{
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.brand__link--info::after{
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.brand__button{
+  margin-left: 31px;
+  margin-bottom: 34px;
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  font-family: 'TT Lakes Medium';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #1B1C21;
+  background: transparent;
+  border: none;
+}
+
+.brand--button{
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+.hide{
+  display: none;
+}
+
+.button--hide .brand__button--img{
+  transform: rotate(180deg);
+}
+
+/* Слайдер */
+
+.swiper-slide-active{
+  margin-left: 16px;
+  margin-right: 8px !important;
+}
+
+.swiper-pagination{
+  position: relative;
+  width: 320px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 16px !important;
+  margin-bottom: 30px;
+}
+
+
+/* Другие размеры экранов */
+@media screen and (min-width: 360px){
+  .swiper-pagination{
+    width: 360px !important;
+  }
+}
+
+@media screen and (min-width: 375px){
+  .swiper-pagination{
+    width: 375px !important;
+  }
+}
+
+@media screen and (min-width: 411px){
+  .swiper-pagination{
+    width: 411px !important;
+  }
+}
+
+@media screen and (min-width: 414px){
+  .swiper-pagination{
+    width: 414px !important;
+  }
+}
+
+@media screen and (min-width: 540px){
+  .swiper-pagination{
+    width: 540px !important;
+  }
+}
+
+@media screen and (min-width: 568px){
+  .swiper-pagination{
+    width: 568px !important;
+  }
+}
+
+@media screen and (min-width: 640px){
+  .swiper-pagination{
+    width: 640px !important;
+  }
+}
+
+@media screen and (min-width: 653px){
+  .swiper-pagination{
+    width: 653px !important;
+  }
+}
+
+@media screen and (min-width: 667px){
+  .swiper-pagination{
+    width: 667px !important;
+  }
+}
+
+@media screen and (min-width: 720px){
+  .swiper-pagination{
+    width: 720px !important;
+  }
+}
+
+@media screen and (min-width: 731px){
+  .swiper-pagination{
+    width: 731px !important;
+  }
+}
+
+@media screen and (min-width: 736px){
+  .swiper-pagination{
+    width: 736px !important;
+  }
+}
+
+@media screen and (min-width: 768px){
+  body{
+    color: #CCCCCC;
+  }
+
+  .button__menu{
+    position: relative;
+    margin-right: 20px;
+  }
+
+  .button__menu:after{
+    position: absolute;
+    content: "";
+    top: 8%;
+    right: -20px;
+    width: 2px;
+    height: 32px;
+    background-color: #EAEAEA;
+  }
+
+  .center{
+    width: 78%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo--img{
+    margin-left: 20px;
+  }
+
+  .button--profile {
+    margin-right: 0;
+  }
+
+  .button--callback{
+    display: flex;
+  }
+
+  .button--info{
+    display: flex;
+  }
+
+  .button--checkstatus{
+    margin-right: 24px;
+  }
+
+  .main__title h1{
+    padding-left: 22px;
+  }
+
+  .main__info{
+    display: none;
+  }
+
+  .nav__list{
+    margin-left: 24px;
+  }
+
+  .nav__list::-webkit-scrollbar{
+    width: 0; 
+  }
+
+  .about{
+    margin-left: 24px;
+    display: flex;
+    margin-top: 5px;
+    padding-bottom: 55px;
+  }
+
+  .about__wrap{
+    width: 49%;
+    padding: 0;
+    margin: 0;
+    padding-right: 50px;
+  }
+
+  .about__text{
+    padding: 0;
+    margin:  0 0 10px 0;
+    height: 160px;
+    overflow: hidden;
+    line-height: 20px;
+  }
+
+  .about__img{
+    margin: 0;
+    width: 360px;
+    height: 208px;
+    background: #F8F8F8;
+    border-radius: 6px;
+  }
+
+  /* Бранд */
+
+  .service--brand{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+
+  .overflow{
+    height: 205px;
+  }
+
+  .brand__link{
+    width: 224px;
+    margin: 0px 12px 8px 12px;
+  }
+
+  .brand__link:first-child{
+    margin-left: 24px;;
+  }
+
+  .brand__link:nth-child(4),
+  .brand__link:nth-child(7),
+  .brand__link:nth-child(10){
+    margin-left: 24px;
+  }
+
+  .brand__link:nth-child(5),
+  .brand__link:nth-child(9){
+    margin: 0px 12px 8px 12px;
+  }
+
+  .pagination{
+    display: none;
+  }
+
+  .brand--button{
+    display: block;
+  }
+
+  .service--container{
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1120px){
+  body{
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  .header{
+    display: none;
+  }
+
+  .main{
+    padding-top: 42px;
+  }
+
+  .main__text{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .main__title h1{
+    margin: 0;
+    padding-left: 30px;
+    min-height: 40px;
+  }
+
+  .main__info{
+    display: flex;
+    align-items: center;
+  }
+
+  .main__info label{
+    font-family: 'TT Lakes Medium';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+  }
+
+  .main__info--repair{
+    background:#FF3E79 url('../img/icon/repair.svg') no-repeat center;
+    margin-left: 8px;
+    margin-right: 32px;
+  }
+
+  .main__info--checkstatus{
+    background:#FF3E79 url('../img/icon/checkstatus.svg') no-repeat center;
+    margin-left: 8px;
+    margin-right: 32px;
+  }
+
+  .nav__list{
+    margin-top: 8px;
+    margin-left: 32px;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: auto;
+  }
+
+  .nav__link{
+    padding: 8px 22px;
+  }
+
+  .about{
+    margin-left: 34px;
+    margin-right: 36px;
+  }
+
+  .about_wrap{
+    width: 55%;
+    margin-left: 32px;
+  }
+
+  .about__text{
+    height: 160px;
+  }
+
+  .about__img{
+    width: 530px;
+    height: 307px;
+  }
+
+  /*  Сервис - бренды  */
 
 .service {
   margin-top: 20px;
@@ -479,203 +912,14 @@ a.contact--tel{
 
 .show{
   display: block;
-  animation: transform 1s ease-in;
 }
 
 .hide{
   display: none;
-  animation: transform 1s ease-in;
 }
 
 .button--hide .brand__button--img{
   transform: rotate(180deg);
-  
 }
 
-@keyframes transform{
-  50%{
-    transform: rotate(90deg);
-  }
-
-  100%{
-    transform: rotate(180deg);
-  }
-}
-
-/* Другие размеры экранов */
-@media screen and (min-width: 768px){
-  body{
-    color: #CCCCCC;
-  }
-
-  .button__menu{
-    position: relative;
-    margin-right: 20px;
-  }
-
-  .button__menu:after{
-    position: absolute;
-    content: "";
-    top: 8%;
-    right: -20px;
-    width: 2px;
-    height: 32px;
-    background-color: #EAEAEA;
-  }
-
-  .center{
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .center__logo--img{
-    margin-left: 20px;
-  }
-
-  .center__callback{
-    display: flex;
-    margin-right: 20px;
-  }
-
-  .info{
-    display: flex;
-  }
-
-  .info__checkstatus{
-    margin-right: 24px;
-  }
-
-  .main__title h1{
-    padding-left: 22px;
-  }
-
-  .main__info{
-    display: none;
-  }
-
-  .nav__list{
-    margin-left: 24px;
-  }
-
-  .nav__list::-webkit-scrollbar{
-    width: 0; 
-  }
-
-  .about{
-    margin-left: 24px;
-    display: flex;
-    margin-top: 5px;
-    padding-bottom: 55px;
-  }
-
-  .about__wrap{
-    width: 49%;
-    padding: 0;
-    margin: 0;
-    padding-right: 50px;
-  }
-
-  .about__text{
-    padding: 0;
-    margin:  0 0 10px 0;
-    height: 160px;
-    overflow: hidden;
-    line-height: 20px;
-  }
-
-  .about__img{
-    margin: 0;
-    width: 360px;
-    height: 208px;
-    background: #F8F8F8;
-    border-radius: 6px;
-  }
-}
-
-@media screen and (min-width: 1120px){
-  body{
-    width: 1120px;
-    margin: 0 auto;
-  }
-
-  .header{
-    display: none;
-  }
-
-  .main{
-    padding-top: 42px;
-  }
-
-  .main__text{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .main__title h1{
-    margin: 0;
-    padding-left: 30px;
-    min-height: 40px;
-  }
-
-  .main__info{
-    display: flex;
-    align-items: center;
-  }
-
-  .main__info label{
-    font-family: 'TT Lakes Medium';
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    color: #1B1C21;
-  }
-
-  .main__info--repair{
-    background:#FF3E79 url('./img/repair.svg') no-repeat center;
-    margin-left: 8px;
-    margin-right: 32px;
-  }
-
-  .main__info--checkstatus{
-    background:#FF3E79 url('./img/checkstatus.svg') no-repeat center;
-    margin-left: 8px;
-    margin-right: 32px;
-  }
-
-  .nav__list{
-    margin-top: 8px;
-    margin-left: 32px;
-    width: 100%;
-    flex-wrap: wrap;
-    overflow: auto;
-  }
-
-  .nav__link{
-    padding: 8px 22px;
-  }
-
-  .about{
-    margin-left: 34px;
-    margin-right: 36px;
-  }
-
-  .about_wrap{
-    width: 55%;
-    margin-left: 32px;
-  }
-
-  .about__text{
-    height: 160px;
-  }
-
-  .about__img{
-    width: 530px;
-    height: 307px;
-  }
-
-  
 }

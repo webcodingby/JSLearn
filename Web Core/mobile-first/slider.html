@@ -10,54 +10,59 @@
 <body>
   <div class="service">
     <h2 class="service--title">Ремонт техники различных брендов</h2>
-    <div class="service--brand overflow">
-      <a href="#" class="brand__link">
-        <img src="./img/brand/lenovo.png" alt="Lenovo" class="brand__link--img">
-        <span href="#" class="brand__link--info"></span>
-      </a>
-      <a class="brand__link" href="#">
-        <img class="brand__link--img" src="./img/brand/samsung.png" alt="Samsung">
-        <span class="brand__link--info" href="#"></span>
-      </a>
-      <a class="brand__link" href="#">
-        <img class="brand__link--img" src="./img/brand/apple.png" alt="Apple">
-        <span class="brand__link--info" href="#"></span>
-      </a>
-      <a class="brand__link" href="#">
-        <img class="brand__link--img" src="./img/brand/viewsonic.png" alt="ViewSonic">
-        <span class="brand__link--info" href="#"></span>
-      </a>
-      <a class="brand__link" href="#">
-        <img class="brand__link--img" src="./img/brand/Bosch.png" alt="Bosch">
-        <span class="brand__link--info" href="#"></span>
-      </a>
-      <a class="brand__link" href="#">
-        <img class="brand__link--img" src="./img/brand/hp.png" alt="hp">
-        <span class="brand__link--info" href="#"></span>
-      </a>
-      <a class="brand__link" href="#">
-        <img class="brand__link--img" src="./img/brand/acer.png" alt="Acer">
-        <span class="brand__link--info" href="#"></span>
-      </a>
-      <a class="brand__link" href="#">
-        <img class="brand__link--img" src="./img/brand/sony.png" alt="Sony">
-        <span class="brand__link--info" href="#"></span>
-      </a>
-      <a class="brand__link" href="#">
-        <img class="brand__link--img" src="./img/brand/lenovo.png" alt="Lenovo">
-        <span class="brand__link--info" href="#"></span>
-      </a>
-      <a class="brand__link" href="#">
-        <img class="brand__link--img" src="./img/brand/samsung.png" alt="Samsung">
-        <span class="brand__link--info" href="#"></span>
-      </a>
-      <a class="brand__link" href="#">
-        <img class="brand__link--img" src="./img/brand/apple.png" alt="Apple">
-        <span class="brand__link--info" href="#"></span>
-      </a>
+    <div class="service--container swiper-container">
+      <div class="service--brand overflow swiper-wrapper">
+        <a class="brand__link swiper-slide" href="#" >
+          <img class="brand__link--img" src="./img/brand/lenovo.png" alt="Lenovo">
+          <span class="brand__link--info" href="#"></span>
+        </a>
+        <a class="brand__link swiper-slide" href="#">
+          <img class="brand__link--img" src="./img/brand/samsung.png" alt="Samsung">
+          <span class="brand__link--info" href="#"></span>
+        </a>
+        <a class="brand__link swiper-slide" href="#">
+          <img class="brand__link--img" src="./img/brand/apple.png" alt="Apple">
+          <span class="brand__link--info" href="#"></span>
+        </a>
+        <a class="brand__link swiper-slide" href="#">
+          <img class="brand__link--img" src="./img/brand/viewsonic.png" alt="ViewSonic">
+          <span class="brand__link--info" href="#"></span>
+        </a>
+        <a class="brand__link swiper-slide" href="#">
+          <img class="brand__link--img" src="./img/brand/Bosch.png" alt="Bosch">
+          <span class="brand__link--info" href="#"></span>
+        </a>
+        <a class="brand__link swiper-slide" href="#">
+          <img class="brand__link--img" src="./img/brand/hp.png" alt="hp">
+          <span class="brand__link--info" href="#"></span>
+        </a>
+        <a class="brand__link swiper-slide" href="#">
+          <img class="brand__link--img" src="./img/brand/acer.png" alt="Acer">
+          <span class="brand__link--info" href="#"></span>
+        </a>
+        <a class="brand__link swiper-slide" href="#">
+          <img class="brand__link--img" src="./img/brand/sony.png" alt="Sony">
+          <span class="brand__link--info" href="#"></span>
+        </a>
+        <a class="brand__link swiper-slide" href="#">
+          <img class="brand__link--img" src="./img/brand/lenovo.png" alt="Lenovo">
+          <span class="brand__link--info" href="#"></span>
+        </a>
+        <a class="brand__link swiper-slide" href="#">
+          <img class="brand__link--img" src="./img/brand/samsung.png" alt="Samsung">
+          <span class="brand__link--info" href="#"></span>
+        </a>
+        <a class="brand__link swiper-slide" href="#">
+          <img class="brand__link--img" src="./img/brand/apple.png" alt="Apple">
+          <span class="brand__link--info" href="#"></span>
+        </a>
+      </div>
+      <div class="pagination swiper-pagination"></div>
     </div>
-    <button class="button--show brand__button"><img class="brand__button--img" src="./img/expand.svg">Показать все</button>
-    <button class="button--hide brand__button hide"><img class="brand__button--img" src="./img/expand.svg">Скрыть</button>
+    <div class="brand--button">
+      <button class="button--show brand__button"><img class="brand__button--img" src="./img/expand.svg">Показать все</button>
+      <button class="button--hide brand__button hide"><img class="brand__button--img" src="./img/expand.svg">Скрыть</button>
+    </div>
   </div>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="./js/main.js"></script>
