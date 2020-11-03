@@ -32,44 +32,45 @@
         </div>
         <div class="main__info">
           <label for="repair">Оставить заявку</label>
-          <div id="#repair" class="main__info--repair button"></div>
+          <button class="button--repair button" id="#repair"></button>
           <label for="checkstatus">Статус ремонта</label>
-          <div id="checkstatus" class="main__info--checkstatus button"></div>
+          <button class="button--checkstatus button" id="checkstatus"></button>
         </div>
       </div>
-      <nav class="nav__list">
-        <a class="nav__link" href="#">Ремонтируемые устройства</a>
-        <a class="nav__link" href="#">Дополнительные услуги</a>
-        <a class="nav__link" href="#">Цены на услуги</a>
-        <a class="nav__link" href="#">Специальные цены</a>
-        <a class="nav__link" href="#">Адреса сервисных центров</a>
-        <a class="nav__link" href="#">Отзывы</a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav--item"><a class="nav__link" href="#">Ремонтируемые устройства</a></li>
+          <li class="nav--item"><a class="nav__link" href="#">Дополнительные услуги</a></li>
+          <li class="nav--item"><a class="nav__link" href="#">Цены на услуги</a></li>
+          <li class="nav--item"><a class="nav__link" href="#">Специальные цены</a></li>
+          <li class="nav--item"><a class="nav__link" href="#">Адреса сервисных центров</a></li>
+          <li class="nav--item"><a class="nav__link" href="#">Отзывы</a></li>
+        </ul>
       </nav>
       <section class="about">
         <div class="about__wrap">
-          <p class="about__text">
-            Мы являемся авторизованным сервисным центром по ремонту техники 
-            Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с 
-            официальной гарантией производителя.
-            <br>
-            <br>
-            Мы успешно работаем с 1992 года и заслужили репутацию надежного 
-            партнера, что подтверждает большое количество постоянных клиентов. 
-            Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою 
-            очередь, советуют нас родным и близким.
-          </p>
-          <div class="button--about">
-            <img class="link--img" src="./img/icon/expand.svg" alt>
-            <a class="about--link" href="#">Читать далее</a>
-            <a class="about--link hide" href="#">Скрыть</a>
-          </div>
+            <p class="about__text">
+              Мы являемся авторизованным сервисным центром по ремонту техники 
+              Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с 
+              официальной гарантией производителя.
+            </p>
+            <p class="about__text">
+              Мы успешно работаем с 1992 года и заслужили репутацию надежного 
+              партнера, что подтверждает большое количество постоянных клиентов. 
+              Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою 
+              очередь, советуют нас родным и близким.
+            </p>
         </div>
-
+        <div class="button--about">
+          <button class="button--show" href="#"><img class="button--img" src="./img/icon/expand.svg" alt>Читать далее</button>
+          <button class="button--hide hide" href="#"><img class="button--img" src="./img/icon/expand.svg" alt>Скрыть</button>
+        </div>
+        
         <img class="about__img" src="./img/about-company.jpg" alt="company">
       </section>
     </main>
   </div>
   
-
+  <script src="./js/main.js"></script>
 </body>
 </html>
