@@ -39,7 +39,6 @@ font-weight: 900;
 }
 
 *:focus{
-  border: 1px solid #ccc;
   opacity: 0.9;
 }
 
@@ -53,7 +52,7 @@ label{
 }
 
 body{
-  min-width: 320px;
+  width: 320px;
   font-family: 'TT Lakes Regular';
   font-size: 16px;
 }
@@ -330,7 +329,7 @@ li {
 .column--menu .menu--link:active,
 .column--menu .menu--link:focus{
   margin-left: 0;
-  padding-left: 24px;
+  padding-left: 22px;
   color: #7E7E82;
   border-left: 2px solid #41F6D7;
 }
@@ -432,6 +431,7 @@ a.contact--tel{
 }
 
 .service--brand {
+  width: 320px !important;
   position: relative;
   padding: 0;
   display: flex;
@@ -541,72 +541,120 @@ a.contact--tel{
 
 /* Другие размеры экранов */
 @media screen and (min-width: 360px){
+  .service--brand{
+    width: 360px !important;
+  }
+  
   .swiper-pagination{
     width: 360px !important;
   }
 }
 
 @media screen and (min-width: 375px){
+  .service--brand{
+    width: 375px !important;
+  }
+
   .swiper-pagination{
     width: 375px !important;
   }
 }
 
 @media screen and (min-width: 411px){
+  .service--brand{
+    width: 411px !important;
+  }
+
   .swiper-pagination{
     width: 411px !important;
   }
 }
 
 @media screen and (min-width: 414px){
+  .service--brand{
+    width: 414px !important;
+  }
+
   .swiper-pagination{
     width: 414px !important;
   }
 }
 
 @media screen and (min-width: 540px){
+  .service--brand{
+    width: 540px !important;
+  }
+
   .swiper-pagination{
     width: 540px !important;
   }
 }
 
 @media screen and (min-width: 568px){
+  .service--brand{
+    width: 568px !important;
+  }
+
   .swiper-pagination{
     width: 568px !important;
   }
 }
 
 @media screen and (min-width: 640px){
+  .service--brand{
+    width: 640px !important;
+  }
+
   .swiper-pagination{
     width: 640px !important;
   }
 }
 
 @media screen and (min-width: 653px){
+  .service--brand{
+    width: 653px !important;
+  }
+
   .swiper-pagination{
     width: 653px !important;
   }
 }
 
 @media screen and (min-width: 667px){
+  .service--brand{
+    width: 667px !important;
+  }
+  
   .swiper-pagination{
     width: 667px !important;
   }
 }
 
 @media screen and (min-width: 720px){
+  .service--brand{
+    width: 720px !important;
+  }
+
   .swiper-pagination{
     width: 720px !important;
   }
 }
 
 @media screen and (min-width: 731px){
+  .service--brand{
+    width: 731px !important;
+  }
+
   .swiper-pagination{
     width: 731px !important;
   }
 }
 
 @media screen and (min-width: 736px){
+  .service--brand{
+    width: 736px !important;
+  }
+
   .swiper-pagination{
     width: 736px !important;
   }
