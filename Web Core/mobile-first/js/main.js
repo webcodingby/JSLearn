@@ -14,12 +14,10 @@ show.addEventListener('click', function () {
   show.classList.add('hide');
   hide.classList.remove('hide');
   if(buttonAbout){
-    console.log('1');
     text.classList.add('height--overflow');
     buttonAbout.classList.add('button--overflow');
   }
   if(brand){
-    console.log('2');
     brand.classList.remove('overflow');  
   }
 })
@@ -36,23 +34,22 @@ hide.addEventListener('click', function () {
   }
 })
 
+
 if (serviceContainer) {
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    setWrapperSize: 10,
-    width: 247,
-    spaceBetween: 30,
-    freeMode: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
+  if (screen.width <= 767) {
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      setWrapperSize: 10,
+      width: 247,
+      spaceBetween: 30,
+      freeMode: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
 
-  mySwiper.width = 320;
-  console.log(brandLink);
-
-  if (screen.width > 767) {
+  } else {
     serviceContainer.classList.remove('swiper-container');
     brand.classList.remove('swiper-wrapper');
     brand.removeAttribute('id');
@@ -63,33 +60,5 @@ if (serviceContainer) {
       brandLink[i].classList.remove('swiper-slide');
       brandLink[i].removeAttribute('style');
     }
-  } else if (screen.width <= 767) {
-    serviceContainer.classList.add('swiper-container');
-    brand.classList.add('swiper-wrapper');
-    pagination.classList.add('swiper-pagination');
-    pagination.classList.remove('hide');
-    for (let i = 1; i <= brandLink.length - 1; i++) {
-      brandLink[i].classList.add('swiper-slide');
-    }
   }
-
-  window.addEventListener('resize', function () {
-    if (document.documentElement.clientWidth > 767) {
-      serviceContainer.classList.remove('swiper-container');
-      brand.classList.remove('swiper-wrapper');
-      pagination.classList.remove('swiper-pagination');
-      pagination.classList.add('hide');
-      for (let i = 0; i <= brandLink.length - 1; i++) {
-        brandLink[i].classList.remove('.swiper-slide');
-      }
-    } else if (document.documentElement.clientWidth <= 767) {
-      serviceContainer.classList.add('swiper-container');
-      brand.classList.add('swiper-wrapper');
-      pagination.classList.add('swiper-pagination');
-      pagination.classList.remove('hide');
-      for (let i = 1; i <= brandLink.length - 1; i++) {
-        brandLink[i].classList.add('.swiper-slide');
-      }
-    }
-  });
 }

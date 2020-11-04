@@ -216,10 +216,6 @@ li {
   overflow: hidden;
 }
 
-.height--overflow{
-  height: 230px;
-}
-
 .about__text {
   font-family: 'TT Lakes Regular', serif;
   font-weight: 300;
@@ -239,23 +235,15 @@ li {
 }
 
 
-.button--hide:hover,
-.button--show:hover,
-.button--hide:active,
-.button--show:active{
+.button--readmore:hover,
+.button--readmore:active{
   border-bottom: 2px solid #41F6D7;
   margin-bottom: -2px;
 }
 
 .button--about {
   margin-left: 8px;
-  font-family: 'TT Lakes Medium';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  color: #1B1C21;
+  transform: translate(0px, -5px);
 }
 
 .button--hide,
@@ -269,9 +257,18 @@ li {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  /* identical to box height, or 150% */
   letter-spacing: -0.2px;
   color: #1B1C21;
+}
+
+
+/* прячем текст и двигаем кнопки с помощью js и классов*/
+.height--overflow{
+  height: 230px;
+}
+
+.button--overflow{
+    transform: translate(0px, -10px);
 }
 
 /*  Меню  */
@@ -430,31 +427,22 @@ a.contact--tel{
   background: linear-gradient(-270deg, #F8F8F8 0%, #FFFFFF 98.61%);
 }
 
+.service--container{
+    width: 100%;
+}
+
 .service--brand {
-  width: 320px !important;
+  width: 100%;
   position: relative;
   padding: 0;
   display: flex;
   align-items: center;
 }
 
-/* .service--brand::after{
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  content: '';
-  right: 0;
-  width: 5px;
-  z-index: 2;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 10px 0 0 10px;
-} */
-
 .brand__link {
   margin: 16px 8px;
-  padding: 20px 16px;
-  width: 240px !important;
+  padding: 16px 16px;
+  width: 240px;
   height: 72px;
   display: flex;
   align-items: center;
@@ -499,9 +487,15 @@ a.contact--tel{
   transform: translateY(-8px) rotate(-45deg);
 }
 
-.brand__button{
+.button--brand{
   margin-left: 31px;
   margin-bottom: 34px;
+  border: 2px solid transparent;
+}
+
+.button--brand:hover,
+.button--brand:active{
+  border-bottom: 2px solid #41F6D7;
 }
 
 .brand--button{
@@ -529,139 +523,127 @@ a.contact--tel{
 
 .swiper-pagination{
   position: relative;
-  width: 320px !important;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  margin-right: 16px !important;
+  margin-right: 16px;
   margin-bottom: 30px;
 }
 
 
 /* Другие размеры экранов */
 @media screen and (min-width: 360px){
-  .service--brand{
-    width: 360px !important;
+  body{
+    width: 360px;
   }
-  
-  .swiper-pagination{
-    width: 360px !important;
+
+  .about__img{
+    width: 100%;
+  }
+
+  .button--about {
+    transform: translate(0px, -20px);
+  }
+
+  .button--overflow{
+    transform: translate(0px, -30px);
   }
 }
 
 @media screen and (min-width: 375px){
-  .service--brand{
-    width: 375px !important;
-  }
-
-  .swiper-pagination{
-    width: 375px !important;
+  body{
+    width: 375px;
   }
 }
 
 @media screen and (min-width: 411px){
-  .service--brand{
-    width: 411px !important;
+  body{
+    width: 411px;
   }
 
-  .swiper-pagination{
-    width: 411px !important;
+  .button--about {
+    transform: translate(0px, -25px);
+  }
+
+  .button--overflow{
+    transform: translate(0px, -50px);
   }
 }
 
 @media screen and (min-width: 414px){
-  .service--brand{
-    width: 414px !important;
-  }
-
-  .swiper-pagination{
-    width: 414px !important;
+  body{
+    width: 414px;
   }
 }
 
 @media screen and (min-width: 540px){
-  .service--brand{
-    width: 540px !important;
+  body{
+    width: 540px;
   }
 
-  .swiper-pagination{
-    width: 540px !important;
+  .height--overflow {
+    height: 120px;
+  }
+
+  .button--about {
+    transform: translate(0px, -10px);
+  }
+
+  .button--overflow{
+    transform: translate(0px, 0px);
+  }
+
+  .about__img{
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 568px){
-  .service--brand{
-    width: 568px !important;
-  }
-
-  .swiper-pagination{
-    width: 568px !important;
+  body{
+    width: 568px;
   }
 }
 
 @media screen and (min-width: 640px){
-  .service--brand{
-    width: 640px !important;
-  }
-
-  .swiper-pagination{
-    width: 640px !important;
+  body{
+    width: 640px;
   }
 }
 
 @media screen and (min-width: 653px){
-  .service--brand{
-    width: 653px !important;
-  }
-
-  .swiper-pagination{
-    width: 653px !important;
+  body{
+    width: 653px;
   }
 }
 
 @media screen and (min-width: 667px){
-  .service--brand{
-    width: 667px !important;
-  }
-  
-  .swiper-pagination{
-    width: 667px !important;
+  body{
+    width: 667px;
   }
 }
 
 @media screen and (min-width: 720px){
-  .service--brand{
-    width: 720px !important;
-  }
-
-  .swiper-pagination{
-    width: 720px !important;
+  body{
+    width: 720px;
   }
 }
 
 @media screen and (min-width: 731px){
-  .service--brand{
-    width: 731px !important;
-  }
-
-  .swiper-pagination{
-    width: 731px !important;
+  body{
+    width: 731px;
   }
 }
 
 @media screen and (min-width: 736px){
-  .service--brand{
-    width: 736px !important;
-  }
-
-  .swiper-pagination{
-    width: 736px !important;
+  body{
+    width: 736px;
   }
 }
 
-@media screen and (min-width: 767px){
+@media screen and (min-width: 768px){
   body{
+    width: 768px;
     color: #CCCCCC;
   }
 
@@ -759,7 +741,7 @@ a.contact--tel{
   }
 
   .button--overflow{
-    transform: none;
+    transform: translate(0px, -30px);
   }
 
   .about__img{
@@ -772,24 +754,53 @@ a.contact--tel{
   }
 
   /* Бранд */
-
   .service--brand{
     display: flex;
     flex-wrap: wrap;
     margin-top: 24px;
+    margin-left: 24px;
+    overflow: hidden;
+  }
+
+  .service--title{
+    padding: 24px;
   }
 
   .overflow{
-    height: 205px;
+    height: 170px;
   }
 
   .brand__link{
+    margin: 0;
     width: 224px;
-    margin: 0px 12px 8px 12px;
+    margin-left: 24px;
+    margin-bottom: 16px;
   }
 
-  .brand__link:first-child{
-    margin-left: 24px;;
+  .brand__link:nth-child(1),
+  .brand__link:nth-child(4),
+  .brand__link:nth-child(7),
+  .brand__link:nth-child(10){
+    margin-left: 0;
+  }
+
+  .pagination{
+    display: none;
+  }
+
+  .brand--button{
+    display: flex;
+  }
+
+}
+
+@media screen and (min-width: 1024px){
+  body{
+    width: 1024px;
+  }
+
+  .about__wrap{
+    width: 62%;
   }
 
   .brand__link:nth-child(4),
@@ -800,25 +811,13 @@ a.contact--tel{
 
   .brand__link:nth-child(5),
   .brand__link:nth-child(9){
-    margin: 0px 12px 8px 12px;
-  }
-
-  .pagination{
-    display: none;
-  }
-
-  .brand--button{
-    display: block;
-  }
-
-  .service--container{
-    width: 768px;
+    margin-left: 0;
   }
 }
 
 @media screen and (min-width: 1120px){
   body{
-    max-width: 1120px;
+    min-width: 1120px;
     margin: 0 auto;
   }
 
@@ -922,21 +921,20 @@ a.contact--tel{
 }
 
 .service--brand {
-  padding: 24px 0 8px 0;
+  margin: 24px 32px 24px 32px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  overflow: none;
+  overflow: hidden;
 }
 
 .overflow{
-  height: 220px;
-  overflow: hidden;
+  height: 160px;
   /* animation: overflow 2s ease-in; */
 }
 
 .brand__link {
-  margin-right: 32px;
+  margin-left: 32px;
   margin-bottom: 16px;
   padding: 20px 16px;
   width: 240px;
@@ -951,16 +949,13 @@ a.contact--tel{
 .brand__link:first-child,
 .brand__link:nth-child(5),
 .brand__link:nth-child(9){
+  margin-left: 0px;
+}
+
+.brand__link:nth-child(4),
+.brand__link:nth-child(7),
+.brand__link:nth-child(10){
   margin-left: 32px;
-}
-
-.brand__link:nth-child(3),
-.brand__link:nth-child(11){
-  padding: 20px 16px 16px;
-}
-
-.brand__link:nth-child(6){
-  padding: 12px 16px 16px;
 }
 
 .brand__link:hover .brand__link--img{
@@ -994,21 +989,6 @@ a.contact--tel{
 
 .brand__link--info::after{
   transform: translateY(-8px) rotate(-45deg);
-}
-
-.brand__button{
-  margin-left: 31px;
-  margin-bottom: 34px;
-  display: flex;
-  align-items: center;
-  align-self: flex-start;
-  font-family: 'TT Lakes Medium';
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  color: #1B1C21;
-  background: transparent;
-  border: none;
 }
 
 .show{
