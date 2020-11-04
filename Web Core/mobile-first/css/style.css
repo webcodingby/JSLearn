@@ -881,14 +881,13 @@ a.contact--tel{
   }
 
   .about{
+    width: 100%;
     margin-left: 34px;
     margin-right: 36px;
   }
 
-  .about_wrap{
-    width: 55%;
-    margin-left: 32px;
-    height: 160px;
+  .about__wrap{
+    width: 48.5%;
   }
 
   .button--about{
