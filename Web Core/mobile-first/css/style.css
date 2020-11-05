@@ -52,7 +52,7 @@ label{
 }
 
 body{
-  width: 320px;
+  width: 100%;
   font-family: 'TT Lakes Regular', serif;
   font-size: 16px;
 }
@@ -228,6 +228,7 @@ li {
 }
 
 .about__img {
+  width: 100%;
   margin-top: 16px;
   margin-bottom: 30px;
 }
@@ -271,19 +272,24 @@ li {
 /*  Меню  */
 
 .mobile--menu {
-  padding-top: 24px;
-  padding-bottom: 32px;
-  max-width: 320px;
+  padding-top: 16px;
+  padding-bottom: 4px;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   color: #1B1C21;
-  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 
-              16px 0px 52px rgba(14, 24, 80, 0.2);
 }
 .mobile--header {
   display: flex;
   align-items: center;
-  margin-left: 24px;
+  justify-content: space-between;
+  margin: 0 24px;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
 }
 
 .button--cancel {
@@ -292,24 +298,24 @@ li {
 }
 
 .button--search {
-  margin-left: 78px;
   background: #FF3E79 url('../img/icon/search.svg') no-repeat center;
 }
 
 .mobile--column{
-  margin-top: 46px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 100px);
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 16px;
 }
 
-.mobile--column,
 .column--menu {
   display: flex;
   flex-direction: column;
 }
 
-.column--menu .menu--link{
-  position: relative;
-  margin-left: 24px;
-  margin-bottom: 32px;
+.menu--link{
   position: relative;
   font-family: 'TT Lakes Medium';
   font-size: 16px;
@@ -318,28 +324,27 @@ li {
   color: #1B1C21;
 }
 
-.column--menu .menu--link.active,
-.column--menu .menu--link:hover,
-.column--menu .menu--link:active,
-.column--menu .menu--link:focus{
-  margin-left: 0;
-  padding-left: 22px;
-  color: #7E7E82;
-  border-left: 2px solid #41F6D7;
+.menu--link:hover::before,
+.menu--link:focus::before{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -16px;
+  width: 4px;
+  height: 100%;
+  background: #41F6D7;
+  border-radius: 0 20px 20px 0;
 }
 
-.column--menu .menu--link:before{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 10px;
-  height: 10px;
-  background: #000;
+.nav--item{
+  margin-bottom: 24px;
+}
+
+.nav--item:last-child{
+  margin-bottom: 32px;
 }
 
 .mobile--contact {
-  margin-top: 200px;
-  margin-left: 24px;
   display: flex;
   flex-direction: column;
 }
@@ -360,11 +365,15 @@ li {
   
 .button--profile{
   background:#FF3E79 url('../img/icon/profile.svg') no-repeat center;
-  margin-right: 16px;
+}
+
+.mobile--mobile{
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
 }
 
 a.contact--mail{
-  margin: 16px 0 12px 0;
   font-family: 'TT Lakes Medium';
   font-size: 16px;
   line-height: 24px;
@@ -373,6 +382,7 @@ a.contact--mail{
 }
 
 a.contact--tel{
+  margin-top: 12px;
   font-family: 'TT Lakes Bold';
   font-size: 24px;
   line-height: 32px;
@@ -382,8 +392,8 @@ a.contact--tel{
 
 .lang {
   display: flex;
-  margin-top: 40px;
-  margin-left: 24px;
+  margin-top: 8px;
+  margin-bottom: 32px;
 }
 
 .lang a{
@@ -400,7 +410,8 @@ a.contact--tel{
   margin-right: 0;
 }
 
-.lang a.active{
+.lang a:hover,
+.lang a:focus{
   color: #7E7E82;
 }
 
@@ -530,13 +541,6 @@ a.contact--tel{
 
 /* Другие размеры экранов */
 @media screen and (min-width: 360px){
-  body{
-    width: 360px;
-  }
-
-  .about__img{
-    width: 100%;
-  }
 
   .button--about {
     transform: translate(0px, -20px);
@@ -547,16 +551,9 @@ a.contact--tel{
   }
 }
 
-@media screen and (min-width: 375px){
-  body{
-    width: 375px;
-  }
-}
 
 @media screen and (min-width: 411px){
-  body{
-    width: 411px;
-  }
+
 
   .button--about {
     transform: translate(0px, -25px);
@@ -567,17 +564,8 @@ a.contact--tel{
   }
 }
 
-@media screen and (min-width: 414px){
-  body{
-    width: 414px;
-  }
-}
 
 @media screen and (min-width: 540px){
-  body{
-    width: 540px;
-  }
-
   .height--overflow {
     height: 120px;
   }
@@ -589,57 +577,10 @@ a.contact--tel{
   .button--overflow{
     transform: translate(0px, 0px);
   }
-
-  .about__img{
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 568px){
-  body{
-    width: 568px;
-  }
-}
-
-@media screen and (min-width: 640px){
-  body{
-    width: 640px;
-  }
-}
-
-@media screen and (min-width: 653px){
-  body{
-    width: 653px;
-  }
-}
-
-@media screen and (min-width: 667px){
-  body{
-    width: 667px;
-  }
-}
-
-@media screen and (min-width: 720px){
-  body{
-    width: 720px;
-  }
-}
-
-@media screen and (min-width: 731px){
-  body{
-    width: 731px;
-  }
-}
-
-@media screen and (min-width: 736px){
-  body{
-    width: 736px;
-  }
 }
 
 @media screen and (min-width: 768px){
   body{
-    width: 768px;
     color: #CCCCCC;
   }
 
@@ -748,6 +689,39 @@ a.contact--tel{
     background: #F8F8F8;
     border-radius: 6px;
   }
+
+    /*  Меню  */
+
+.mobile--menu {
+  padding-top: 18px;
+  padding-bottom: 32px;
+  max-width: 320px;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 
+              16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+
+.mobile--column{
+  margin-left: 24px;
+  height: calc(100vh - 160px);
+  margin-top: 46px;
+}
+
+.nav--item{
+  margin-bottom: 32px;
+}
+
+.menu--link:hover:before,
+.menu--link:focus:before{
+  left: -24px;
+}
+
+.mobile--mobile{
+  margin-top: 16px;
+}
+
+.lang {
+  margin-top: 40px;
+}
 
   /* Бранд */
   .service--brand{
@@ -894,6 +868,16 @@ a.contact--tel{
     width: 530px;
     height: 307px;
   }
+
+  /* Меню */
+
+  .mobile--column{
+    height: 100vh;
+  }
+  .lang{
+    margin-bottom: 0;
+  }
+
 
   /*  Сервис - бренды  */
 
