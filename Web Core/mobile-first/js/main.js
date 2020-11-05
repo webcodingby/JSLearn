@@ -13,23 +13,23 @@ const pagination = document.querySelector('.pagination');
 show.addEventListener('click', function () {
   show.classList.add('hide');
   hide.classList.remove('hide');
-  if(buttonAbout){
+  if (buttonAbout) {
     text.classList.add('height--overflow');
     buttonAbout.classList.add('button--overflow');
   }
-  if(brand){
-    brand.classList.remove('overflow');  
+  if (brand) {
+    brand.classList.remove('overflow');
   }
 })
 
 hide.addEventListener('click', function () {
   hide.classList.add('hide');
   show.classList.remove('hide');
-  if(buttonAbout){
+  if (buttonAbout) {
     text.classList.remove('height--overflow');
     buttonAbout.classList.remove('button--overflow');
   }
-  if(brand){
+  if (brand) {
     brand.classList.add('overflow')
   }
 })
@@ -48,7 +48,6 @@ if (serviceContainer) {
         clickable: true,
       },
     });
-
   } else {
     serviceContainer.classList.remove('swiper-container');
     brand.classList.remove('swiper-wrapper');
