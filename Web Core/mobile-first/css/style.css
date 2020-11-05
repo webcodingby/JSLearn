@@ -242,6 +242,7 @@ li {
 .button--readmore:active{
   border-bottom: 2px solid #41F6D7;
   margin-bottom: -2px;
+  transition: border-bottom .5s;
 }
 
 .button--about {
@@ -261,6 +262,11 @@ li {
   line-height: 24px;
   letter-spacing: -0.2px;
   color: #1B1C21;
+}
+
+.button--about:hover .button--img{
+  transform: scale(1.2) translate(0,-5px);
+  transition: transform .5s;
 }
 
 
@@ -509,6 +515,18 @@ a.contact--tel{
 .button--brand:hover,
 .button--brand:active{
   border-bottom: 2px solid #41F6D7;
+}
+
+.button--brand:hover,
+.button--brand:active{
+  border-bottom: 2px solid #41F6D7;
+  transition: border-bottom .5s;
+}
+
+.button--brand:hover .button--img,
+.button--brand:active .button--img{
+  transform: scale(1.2) translate(0, -5px);
+  transition: transform .3s;
 }
 
 .brand--button{
