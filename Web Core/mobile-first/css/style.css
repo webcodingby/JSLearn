@@ -189,7 +189,6 @@ li {
 .nav__link{
   padding: 8px 13px;
   font-family: 'TT Lakes Medium';
-  font-weight: 500;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: -0.2px;
@@ -218,7 +217,6 @@ li {
 
 .about__text {
   font-family: 'TT Lakes Regular', serif;
-  font-weight: 300;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.2px;
@@ -254,7 +252,6 @@ li {
   background: transparent;
   border: none;
   font-family: 'TT Lakes Medium';
-  font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
@@ -378,7 +375,6 @@ a.contact--mail{
 a.contact--tel{
   font-family: 'TT Lakes Bold';
   font-size: 24px;
-  font-weight: 900;
   line-height: 32px;
   letter-spacing: -0.6px;
   color: #1B1C21;
