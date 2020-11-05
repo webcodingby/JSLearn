@@ -84,6 +84,7 @@ li {
 .button:hover{
   border: 1px solid #ccc;
   opacity: 0.8;
+  transition: opacity 0.5s;
 }
 
 .button__menu {
@@ -202,6 +203,8 @@ li {
   background-color: #FFFFFF;
   border: 2px solid #B8FFEC;
   border-radius: 6px;
+  transition: border 0.5s;
+  transition: background-color 0.5s;
 }
 
 .about {
@@ -213,6 +216,7 @@ li {
   margin-bottom: 16px;
   height: 90px;
   overflow: hidden;
+  transition: height 0.5s;
 }
 
 .about__text {
@@ -263,10 +267,12 @@ li {
 /* прячем текст и двигаем кнопки с помощью js и классов*/
 .height--overflow{
   height: 230px;
+  transition: height 0.5s;
 }
 
 .button--overflow{
-    transform: translate(0px, -10px);
+  transform: translate(0px, -10px);
+  transition: transform 0.5s;
 }
 
 /*  Меню  */
@@ -511,14 +517,21 @@ a.contact--tel{
 
 .show{
   display: block;
+  transition: transform 1s;
 }
 
 .hide{
   display: none;
+  transition: transform 1s;
 }
 
 .button--hide .button--img{
   transform: rotate(180deg);
+}
+
+.button--img{
+  transform: rotate(0deg);
+  transition: transform .3s;
 }
 
 /* Слайдер */
@@ -729,6 +742,8 @@ a.contact--tel{
     flex-wrap: wrap;
     margin-top: 24px;
     margin-left: 24px;
+    height: 250px;
+    transition: height 1s;
     overflow: hidden;
   }
 
@@ -738,6 +753,7 @@ a.contact--tel{
 
   .overflow{
     height: 170px;
+    transition: height 1s;
   }
 
   .brand__link{
@@ -909,7 +925,6 @@ a.contact--tel{
 
 .overflow{
   height: 160px;
-  /* animation: overflow 2s ease-in; */
 }
 
 .brand__link {
@@ -929,6 +944,7 @@ a.contact--tel{
 .brand__link:nth-child(5),
 .brand__link:nth-child(9){
   margin-left: 0px;
+  margin-right: 0;
 }
 
 .brand__link:nth-child(4),

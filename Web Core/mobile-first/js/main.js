@@ -35,6 +35,20 @@ hide.addEventListener('click', function () {
 })
 
 if (serviceContainer) {
+  if (screen.width > 767) {
+    serviceContainer.classList.remove('swiper-container');
+    brand.classList.remove('swiper-wrapper');
+    brand.removeAttribute('id');
+    brand.removeAttribute('style');
+    pagination.classList.remove('swiper-pagination');
+    pagination.classList.add('hide');
+    for (let i = 0; i <= brandLink.length - 1; i++) {
+      brandLink[i].classList.remove('swiper-slide-active');
+      brandLink[i].classList.remove('swiper-slide');
+      brandLink[i].removeAttribute('style');
+    }
+
+  }
   var swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
     setWrapperSize: 10,
@@ -47,9 +61,7 @@ if (serviceContainer) {
     },
   });
   window.addEventListener(`resize`, event => {
-    if (screen.width <= 767) {
-      location.reload();
-    } else {
+    if (screen.width > 767) {
       serviceContainer.classList.remove('swiper-container');
       brand.classList.remove('swiper-wrapper');
       brand.removeAttribute('id');
@@ -57,9 +69,13 @@ if (serviceContainer) {
       pagination.classList.remove('swiper-pagination');
       pagination.classList.add('hide');
       for (let i = 0; i <= brandLink.length - 1; i++) {
+        brandLink[i].classList.remove('swiper-slide-active');
         brandLink[i].classList.remove('swiper-slide');
         brandLink[i].removeAttribute('style');
       }
+      
+    } else {
+      location.reload();
     }
   }, false);
 }
