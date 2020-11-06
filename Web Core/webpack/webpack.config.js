@@ -78,7 +78,7 @@ module.exports = {
 
     // Кладем стили в отдельный файлик
     new MiniCssExtractPlugin({
-      filename: 'style.css',
+      filename: 'css/style.css',
     }),
 
     // Копируем картинки

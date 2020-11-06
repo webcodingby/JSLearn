@@ -1,17 +1,12 @@
-$bgColor: #24292e;
-$text: #fff;
+@import 'global/fonts';
+@import 'global/variables';
+@import 'global/normalize';
+@import 'global/global';
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
 
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
-}
+@import 'block/header';
+@import 'block/main';
+@import 'block/footer';
+
+
+@import 'global/media';
