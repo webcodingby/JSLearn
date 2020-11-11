@@ -58,7 +58,7 @@ module.exports = {
         test: /\.(svg|png|jpg|jpeg|webp)$/,
         use: [
           {
-            loader: 'file-loader?name=./static/[name].[ext]'
+            loader: 'file-loader?name=./img/icon/[name].[ext]'
           },
         ]
       },
@@ -78,7 +78,7 @@ module.exports = {
 
     // Кладем стили в отдельный файлик
     new MiniCssExtractPlugin({
-      filename: 'css/style.css',
+      filename: 'style.css',
     }),
 
     // Копируем картинки

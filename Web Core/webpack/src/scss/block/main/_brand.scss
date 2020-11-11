@@ -1,0 +1,42 @@
+/*  Сервис - бренды  */
+
+.brand__link {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  padding: 1.25rem 1rem;
+  min-width: 15rem;
+  max-height: 5.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid $borderColor;
+  border-radius: 6px;
+  background: $blockColor;
+  transform: translate3d(0px, 0px, 0px); 
+  transition: all 0ms ease 0s;
+}
+
+.brand__link:first-child,
+.brand__link:nth-child(5),
+.brand__link:nth-child(9){
+  margin-left: 0px;
+  margin-right: 0;
+}
+
+.brand__link:nth-child(4),
+.brand__link:nth-child(7),
+.brand__link:nth-child(10){
+  margin-left: 2rem;
+}
+
+.brand__link:hover .brand__link--img{
+  filter: grayscale(2) drop-shadow(10px 5px 2px $linkColor);
+}
+
+.brand__link > .link--item{
+  align-self: center;
+}
+
+.button--hide .brand__button--img{
+  transform: rotate(180deg);
+}

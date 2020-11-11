@@ -407,6 +407,7 @@ a.contact--tel{
   align-content: center;
   background: #F8F8F8;
 }
+
 .service--title {
   padding: 16px;
   font-size: 16px;
@@ -760,6 +761,8 @@ a.contact--tel{
     margin-left: 0;
   }
 
+  
+
   .pagination{
     display: none;
   }
@@ -770,24 +773,25 @@ a.contact--tel{
 
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 924px){
+  .brand__link{
+    width: 240px;
+  }
+
+  .brand__link:nth-child(3),
+  .brand__link:nth-child(6){
+    margin-right: 24px;
+  }
+}
+
+@media screen and (min-width: 1030px){
   body{
     width: 1024px;
+    margin: 0 auto;
   }
 
   .about__wrap{
     width: 62%;
-  }
-
-  .brand__link:nth-child(4),
-  .brand__link:nth-child(7),
-  .brand__link:nth-child(10){
-    margin-left: 24px;
-  }
-
-  .brand__link:nth-child(5),
-  .brand__link:nth-child(9){
-    margin-left: 0;
   }
 }
 
@@ -885,7 +889,7 @@ a.contact--tel{
   }
 
 
-  /*  Сервис - бренды  */
+/*  Сервис - бренды  */
 
 .service {
   margin-top: 20px;
@@ -934,6 +938,11 @@ a.contact--tel{
 .brand__link:nth-child(5),
 .brand__link:nth-child(9){
   margin-left: 0px;
+  margin-right: 0;
+}
+
+.brand__link:nth-child(3),
+.brand__link:nth-child(6){
   margin-right: 0;
 }
 

@@ -1,7 +1,168 @@
-body {
-  padding: 1rem;
+*{
+  outline: none;
+  box-sizing: border-box;
   margin: 0;
-  font-family: $fontBold, serif;
-  background-color: $bgColor;
+  padding: 0;
+}
+
+a:hover, button:hover, label:hover,
+a:active, button:active, label:active,
+a:focus, button:focus, label:focus{
+  opacity: 1;
+  text-shadow: 0.5px 0.5px 1px $linkColor;
+}
+
+body {
+  height: 100%;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
   color: $textColor;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+a, button, label{
+  cursor: pointer;
+}
+
+.wrapper{
+  max-width: $maxWidth;
+  margin: 0 auto;
+  display: flex;
+  font-family: $fontRegular, serif;
+  color: $textColor;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  background-color: $bgColor;
+}
+
+.sidebar{
+  min-width: $mobileWidth;
+}
+
+.page{
+  width: calc(100% - 320px);
+}
+
+.button{
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  background-color: $buttonColor;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button:focus,
+.button:hover{
+  border: 1px solid #ccc;
+  opacity: 0.8;
+  transition: opacity 0.5s;
+}
+
+
+.button--hide,
+.button--show{
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  background: transparent;
+  border: none;
+  font-family: $fontMedium;
+  letter-spacing: -0.2px;
+}
+
+.show{
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.overflow{
+  height: 12rem;
+  overflow: hidden;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background:$bgColor;
+  margin-top: 20px;
+}
+
+.container{
+  width: 100%;
+}
+
+.title{
+  padding: 1rem 0px 1rem 2rem;
+  letter-spacing: -0.2px;
+  font-family: $fontRegular;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color:$linkColor;
+  border-top: 1px solid $bottomMenuShadow;
+  background: linear-gradient(-270deg, $bgColor 0%, $blockColor 98.61%);
+}
+
+.block {
+  position: relative;
+  padding: 0;
+  margin: 1.5rem 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.block--link{
+  display: block;
+}
+
+.general--button{
+  margin-left: 32px;
+}
+
+.link--item{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 2px solid $buttonColor;
+  border-radius: 50%;
+}
+
+.link--item::before,
+.link--item::after{
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  height: 0.625rem;
+  width: 0.125rem;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  background: $buttonColor;
+}
+
+.link--item::before{
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.link--item::after{
+  transform: translateY(-8px) rotate(-45deg);
 }

@@ -1,0 +1,136 @@
+/*  Меню  */
+
+.mobile--menu {
+  padding-top: 16px;
+  padding-bottom: 4px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: $textColor;
+  background-color: $blockColor;
+}
+.mobile--header {
+  display: flex;
+  align-items: center;
+  margin: 0 22px;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.button--cancel {
+  display: none;
+  margin-right: 16px;
+  background-image: url('../img/icon/cancel.svg');
+}
+
+.button--search {
+  background-image: url('../img/icon/search.svg');
+}
+
+.mobile--column{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 20px;
+  margin-left: 24px;
+}
+
+.column--menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu--link{
+  position: relative;
+  font-family: $fontMedium;
+  letter-spacing: -0.2px;
+}
+
+.menu--link:hover::before,
+.menu--link:focus::before{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -24px;
+  width: 4px;
+  height: 100%;
+  background: $lineColor;
+  border-radius: 0 20px 20px 0;
+}
+
+.nav__item--mobile{
+  margin-bottom: 24px;
+}
+
+.nav__item--mobile:last-child{
+  margin-bottom: 32px;
+}
+
+.mobile--contact {
+  margin-top: 241px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__callback{
+  display: flex;
+}
+
+.button--call{
+  background-image: url('../img/icon/call.svg');
+  margin-right: 16px;
+}
+
+.button--chat{
+  background-image: url('../img/icon/chat.svg');
+  margin-right: 16px;
+}
+  
+.button--profile{
+  background-image: url('../img/icon/profile.svg');
+}
+
+.mobile--mobile{
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  color: $textColor;
+}
+
+a.contact--mail{
+  font-family: $fontMedium;
+  letter-spacing: -0.2px;
+}
+
+a.contact--tel{
+  margin-top: 12px;
+  font-family: $fontBold;
+  font-size: 1.5rem;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+}
+
+.lang {
+  display: flex;
+  margin-top: 40px;
+}
+
+.lang a{
+  margin-right: 7px;
+  font-family: $fontMedium;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+}
+
+.lang a:last-child{
+  margin-right: 0;
+}
+
+.lang a:hover,
+.lang a:focus{
+  color: $linkColor;
+}

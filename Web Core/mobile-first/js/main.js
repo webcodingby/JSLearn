@@ -9,7 +9,6 @@ const serviceContainer = document.querySelector('.service--container');
 const slide = document.querySelector('.swiper--slide');
 const pagination = document.querySelector('.pagination');
 
-
 show.addEventListener('click', function () {
   show.classList.add('hide');
   hide.classList.remove('hide');
@@ -35,20 +34,24 @@ hide.addEventListener('click', function () {
 })
 
 if (serviceContainer) {
-  if (screen.width > 767) {
-    serviceContainer.classList.remove('swiper-container');
-    brand.classList.remove('swiper-wrapper');
-    brand.removeAttribute('id');
-    brand.removeAttribute('style');
-    pagination.classList.remove('swiper-pagination');
-    pagination.classList.add('hide');
-    for (let i = 0; i <= brandLink.length - 1; i++) {
-      brandLink[i].classList.remove('swiper-slide-active');
-      brandLink[i].classList.remove('swiper-slide');
-      brandLink[i].removeAttribute('style');
+  window.addEventListener(`resize`, event => {
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      location.reload();
+      addSwiper();
+    } else {
+      location.reload();
+      removeAttribute();
     }
+  }, false);
 
+  if (window.matchMedia("(max-width: 767px)").matches){
+    addSwiper();
+  } else {
+    removeAttribute();
   }
+};
+
+function addSwiper() {
   var swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
     setWrapperSize: 10,
@@ -60,22 +63,18 @@ if (serviceContainer) {
       clickable: true,
     },
   });
-  window.addEventListener(`resize`, event => {
-    if (screen.width > 767) {
-      serviceContainer.classList.remove('swiper-container');
-      brand.classList.remove('swiper-wrapper');
-      brand.removeAttribute('id');
-      brand.removeAttribute('style');
-      pagination.classList.remove('swiper-pagination');
-      pagination.classList.add('hide');
-      for (let i = 0; i <= brandLink.length - 1; i++) {
-        brandLink[i].classList.remove('swiper-slide-active');
-        brandLink[i].classList.remove('swiper-slide');
-        brandLink[i].removeAttribute('style');
-      }
-      
-    } else {
-      location.reload();
-    }
-  }, false);
+}
+
+function removeAttribute() {
+  serviceContainer.classList.remove('swiper-container');
+  brand.classList.remove('swiper-wrapper');
+  brand.removeAttribute('id');
+  brand.removeAttribute('style');
+  pagination.classList.remove('swiper-pagination');
+  pagination.classList.add('hide');
+  for (let i = 0; i <= brandLink.length - 1; i++) {
+    brandLink[i].classList.remove('swiper-slide-active');
+    brandLink[i].classList.remove('swiper-slide');
+    brandLink[i].removeAttribute('style');
+  }
 }

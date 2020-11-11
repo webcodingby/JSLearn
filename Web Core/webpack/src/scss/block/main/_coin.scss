@@ -1,0 +1,83 @@
+.coin--block {
+  margin: 32px;
+  flex-direction: column;
+  background: $blockColor;
+  border-radius: 6px;
+}
+
+.benefits{
+  padding: 23px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $borderColor;
+  font-family: $fontRegular;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+}
+
+.benefits--title{
+  display: block;
+  flex-basis: 360px;
+}
+
+.button--order{
+  padding: 4px 8px 4px 12px;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  background: $buttonColor;
+  border-radius: 16px;
+  font-family: $fontBold;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: right;
+  letter-spacing: -0.15px;
+  text-transform: uppercase;
+  color: $blockColor;
+}
+
+.benefits__button--item{
+  width: 24px;
+  height: 24px;
+}
+
+.benefits__button--item:before,
+.benefits__button--item:after{
+  height: 0.5rem;
+  background-color: $blockColor;
+}
+
+.benefits__button--item::after {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.coin-info {
+  margin: 32px;
+  margin-bottom: 0;
+}
+.info--text {
+  margin-bottom: 16px;
+  width: 430px;
+  font-family: $fontRegular;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: $textColor;
+}
+
+.button--info {
+  font-family: $fontMedium;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+
+.coin__link--item {
+  margin: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  transform: scale(.7);
+}

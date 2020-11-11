@@ -1,0 +1,27 @@
+.footer{
+  margin: 83px 31px 21px 31px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: $fontMedium;
+  font-size: 14px;
+  line-height: 1rem;
+  color:$linkColor;
+  mix-blend-mode: normal;
+  opacity: 0.72;
+}
+
+.footer--copywrite::first-line{
+  width: 100px;
+}
+
+.copywrite--developer {
+  color:$linkColor;
+}
+.footer--rules {
+  color:$linkColor;
+}
+.footer--info {
+  flex-basis: 380px;
+  text-align: right;
+}

@@ -1,9 +1,9 @@
+@import 'global/normalize';
 @import 'global/fonts';
 @import 'global/variables';
-@import 'global/normalize';
 @import 'global/global';
 
-
+@import 'block/menu';
 @import 'block/header';
 @import 'block/main';
 @import 'block/footer';

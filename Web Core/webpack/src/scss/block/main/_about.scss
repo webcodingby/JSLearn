@@ -1,0 +1,73 @@
+
+.about {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 100%;
+  margin-left: 34px;
+  margin-right: 36px;
+}
+
+.about__wrap {
+  width: 45.5%;
+  margin-left: 16px;
+  margin-bottom: 16px;
+  order: 1;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+
+
+.about__text {
+  font-family: $fontRegular;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.2px;
+}
+
+.about__text:last-child{
+  margin-top: 16px;
+}
+
+.about__img {
+  align-self: flex-start;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.button--about {
+  order: 3;
+  margin-left: 8px;
+  transform: translate(0px, -150px);
+}
+
+.button--about:active .button--img{
+  transform: scale(1.2) translate(0,-5px);
+  transition: transform .5s;
+}
+
+.button--readmore:hover,
+.button--readmore:active{
+  border-bottom: 2px solid $lineColor;
+  margin-bottom: -2px;
+  transition: border-bottom .5s;
+}
+
+.about__img{
+  order: 2;
+  width: 530px;
+  height: 307px;
+}
+
+
+/* прячем текст и двигаем кнопки с помощью js и классов*/
+.height--overflow{
+  height: 230px;
+  transition: height 0.5s;
+}
+
+.button--overflow{
+  transform: translate(0px, -150px);
+  transition: transform 0.5s;
+}

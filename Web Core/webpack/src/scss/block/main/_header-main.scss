@@ -1,0 +1,107 @@
+// Шапка блока main
+.main {
+  background: $bgColor;
+}
+
+.main__text{
+  margin-top: 42px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main__title{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main__title h1{
+  margin: 0;
+  padding-left: 30px;
+  min-height: 40px;
+  font-family: $fontBold;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.6px;
+  color: $textColor;
+}
+
+.main__title h1::before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: $lineColor;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.main__info{
+  display: flex;
+  align-items: center;
+}
+
+.main__info label{
+  margin-right: 8px;
+  font-family: 'TT Lakes Medium';
+  letter-spacing: -0.2px;
+  color: #1B1C21;
+}
+
+.main__info .button--repair,
+.main__info .button--checkstatus {
+  margin-right: 32px;
+}
+
+
+.nav{
+  margin-top: 8px;
+}
+
+.nav__list{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 30px;
+  margin-right: 0;
+  -ms-overflow-style: auto;
+  -webkit-overflow-scrolling: auto;
+}
+
+.nav__item--main{
+  display: flex;
+  margin-bottom: 0;
+}
+
+.nav__item--main:nth-child(5){
+  margin-right: 0;
+}
+
+.nav__item--main:last-child{
+  margin-bottom: 0;
+}
+
+.nav__link{
+  padding: 8px 20px;
+  font-family: $fontMedium;
+  line-height: 1.25rem;
+  letter-spacing: -0.2px;
+  color: $linkColor;
+  border-radius: 6px;
+  white-space: nowrap;
+  border: 2px solid transparent;
+}
+
+.nav__link:hover,
+.nav__link:active,
+.nav__link:focus{
+  background-color: $blockColor;
+  border: 2px solid $lineColor;
+  // transition: linear border 1s;
+}
+
