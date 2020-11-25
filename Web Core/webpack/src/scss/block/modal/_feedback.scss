@@ -1,0 +1,112 @@
+.modal__feedback{
+  display: none;
+}
+
+.modal{
+  position: absolute;
+  padding: 0 32px;
+  max-width: 440px;
+  height: 100vh;
+  flex-direction: column;
+  top: 0;
+  right: 10%;
+  z-index: 5;
+  background: $blockColor;
+  box-shadow: $modalBoxShadow;
+  transform: translateX(-10%);
+
+  & .button--cancel{
+    display: block;
+    transform: translate(-100px, 40px);
+  }
+
+  &--title{
+    position: relative;
+    margin-top: 5px;
+    font-family: $fontBold;
+    font-size: 1.5rem;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+
+    &:before{
+      position: absolute;
+      content: '';
+      width: 3px;
+      height: 100%;
+      left: -32px;
+      background: $lineColor;
+      border-radius: 25px;
+    }
+  }
+
+  &--form{
+    margin-top: 8px;
+    font-family: $fontMedium;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    letter-spacing: -0.2px;
+
+    color: $modalInputColor;
+
+    & input,
+    & textarea {
+      width: 100%;
+      margin-top: 16px;
+      padding: 12px 16px 12px;
+      border: 1px solid $borderColor;
+      border-radius: 8px;
+    }
+  }
+
+  &--text{
+    margin-top: 16px;
+    font-family: $fontMedium;
+    font-size: 14px;
+    line-height: 16px;
+    color: $linkColor;
+
+    & span{
+      color: $buttonColor;
+    }
+  }
+
+  .button--submit {
+    position: relative;
+    margin-top: 23px;
+    padding: 4px 0 4px 16px;
+    max-width: 135px;
+    text-align: left;
+    border: none;
+    background: #FF3E79;
+    border-radius: 16px;
+    font-family: $fontBold;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    text-transform: uppercase;
+    transform: translateX(180%);
+    color: $blockColor;
+
+    &:before,
+    &:after{
+      position: absolute;
+      content: '';
+      width: 3px;
+      height: 0.6rem;
+      top: 0.5rem;
+      right: 0.9rem;
+      background: $blockColor;
+    }
+
+    &:before{
+      transform: translateY(5px) rotate(45deg);
+    }
+
+    &:after{
+      transform: translateY(0px) rotate(-45deg);
+    }
+  }
+}

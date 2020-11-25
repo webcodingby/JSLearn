@@ -14,6 +14,12 @@ a:focus, button:focus, label:focus{
 
 body {
   height: 100%;
+  max-width: $maxWidth;
+  margin: 0 auto;
+}
+
+body.hidden {
+  overflow: hidden;
 }
 
 li{
@@ -45,8 +51,17 @@ a, button, label{
   background-color: $bgColor;
 }
 
+.wrapper.blur {
+  overflow: hidden;
+  z-index: 0;
+  background: $blockColor;
+  opacity: 0.04;
+}
+
 .sidebar{
+  padding-top: 30px;
   min-width: $mobileWidth;
+  background: $blockColor;
 }
 
 .page{
@@ -166,3 +181,14 @@ a, button, label{
 .link--item::after{
   transform: translateY(-8px) rotate(-45deg);
 }
+
+a:hover span{
+  border-color: $lineColor;
+  box-shadow: 1px 1px 10px 2px $buttonColor;
+}
+
+a:hover .link--item::after,
+a:hover .link--item::before{
+  background: $linkColor;
+}
+
